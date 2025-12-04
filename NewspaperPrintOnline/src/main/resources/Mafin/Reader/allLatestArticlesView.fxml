@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Mafin.Reader.allLatestArticlesCOntroller">
+   <children>
+      <TableView fx:id="latestArticleTableView" layoutX="41.0" layoutY="159.0" prefHeight="200.0" prefWidth="373.0">
+        <columns>
+          <TableColumn fx:id="articleIdTableColumn" prefWidth="129.33331298828125" text="Article Id" />
+          <TableColumn fx:id="articleTitleTableColumn" minWidth="8.000030517578125" prefWidth="242.66665649414062" text="Article Title" />
+        </columns>
+      </TableView>
+      <Label layoutX="27.0" layoutY="49.0" text="Article Id" />
+      <TextField fx:id="articleIdTextField" layoutX="97.0" layoutY="45.0" />
+      <Button layoutX="279.0" layoutY="45.0" mnemonicParsing="false" onAction="#viewDetailstheSelectedArticleButtonOnAction" text="view details the selected Article" />
+   </children>
+</AnchorPane>
