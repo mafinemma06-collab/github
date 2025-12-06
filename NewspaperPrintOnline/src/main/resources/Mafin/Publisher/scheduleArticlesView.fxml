@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="367.0" prefWidth="445.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Mafin.Publisher.scheduleArticlesController">
+   <children>
+      <Label layoutX="25.0" layoutY="33.0" text="Article Id" />
+      <TextField fx:id="idTextField" layoutX="90.0" layoutY="29.0" />
+      <TableView fx:id="tableView" layoutX="49.0" layoutY="146.0" prefHeight="174.0" prefWidth="270.0">
+        <columns>
+          <TableColumn fx:id="idTAbleCOlumn" prefWidth="95.33334732055664" text="Article Id" />
+          <TableColumn fx:id="titleTableColumn" prefWidth="173.3332977294922" text="Article Title" />
+        </columns>
+      </TableView>
+      <DatePicker fx:id="dateDatepicker" layoutX="90.0" layoutY="71.0" />
+      <Label layoutX="36.0" layoutY="75.0" text="Date" />
+      <Label fx:id="messagelabel" layoutX="86.0" layoutY="106.0" prefHeight="17.0" prefWidth="252.0" />
+   </children>
+</AnchorPane>

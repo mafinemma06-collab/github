@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="367.0" prefWidth="445.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Mafin.Publisher.submittedArticleViewController">
+   <children>
+      <TableView fx:id="tableviewSubmittedArticle" layoutX="40.0" layoutY="87.0" prefHeight="200.0" prefWidth="277.0">
+        <columns>
+          <TableColumn fx:id="idTableColumn" prefWidth="130.0" text="Article id" />
+          <TableColumn fx:id="titleTabletitle" prefWidth="146.66665649414062" text="Article Title" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

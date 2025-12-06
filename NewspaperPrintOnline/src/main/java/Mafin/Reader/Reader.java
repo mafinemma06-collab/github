@@ -2,7 +2,9 @@ package Mafin.Reader;
 
 import mainpackage.newspaperprintonline.User;
 
-public class Reader extends User {
+import java.io.Serializable;
+
+public class Reader extends User implements Serializable {
     private String subscriptionType;
 
     public Reader(String id, String name, String phone, String email, String password, String subscriptionType) {

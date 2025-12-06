@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="416.0" prefWidth="477.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Mafin.Reader.bookmarkController">
+   <children>
+      <TableView fx:id="tableviewbookmark" layoutX="51.0" layoutY="99.0" prefHeight="200.0" prefWidth="391.0">
+        <columns>
+          <TableColumn fx:id="idtableColumn" prefWidth="71.33333969116211" text="Article id" />
+          <TableColumn fx:id="titleTableColumn" minWidth="0.0" prefWidth="129.33330535888672" text="Article Title" />
+            <TableColumn fx:id="descriptionTableCOlumn" prefWidth="163.3332977294922" text="Article Description" />
+        </columns>
+      </TableView>
+      <Label layoutX="76.0" layoutY="31.0" prefHeight="38.0" prefWidth="341.0" text="BookMark Articles">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

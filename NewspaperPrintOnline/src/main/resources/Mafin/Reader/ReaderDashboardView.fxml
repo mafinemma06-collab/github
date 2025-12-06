@@ -6,13 +6,12 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="readerAnchorpane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Mafin.Reader.ReaderDashboardController">
+<AnchorPane fx:id="readerAnchorpane" prefHeight="466.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Mafin.Reader.ReaderDashboardController">
    <children>
-      <Button layoutX="14.0" layoutY="70.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="14.0" layoutY="114.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="14.0" layoutY="157.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="14.0" layoutY="195.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="14.0" layoutY="70.0" mnemonicParsing="false" onAction="#readLastestArticleButtonOnAction" text="Read all latest articles" />
+      <Button layoutX="14.0" layoutY="114.0" mnemonicParsing="false" onAction="#searchArticleCatagoryButtonOnAction" text="Search Article by Catagory" />
+      <Button layoutX="14.0" layoutY="157.0" mnemonicParsing="false" onAction="#subscriptionPlanButtonOnAction" text="Subscription Plan" />
+      <Button layoutX="14.0" layoutY="195.0" mnemonicParsing="false" onAction="#bookmarkButtonOnAction" text="BookMark view" />
       <Button layoutX="14.0" layoutY="235.0" mnemonicParsing="false" text="Button" />
       <Button layoutX="14.0" layoutY="279.0" mnemonicParsing="false" text="Button" />
       <Button layoutX="14.0" layoutY="322.0" mnemonicParsing="false" text="Button" />
@@ -22,7 +21,9 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Line endX="-100.0" endY="305.3333435058594" layoutX="232.0" layoutY="70.0" startX="-100.0" />
-      <AnchorPane fx:id="partialAnchorpane" layoutX="156.0" layoutY="50.0" prefHeight="340.0" prefWidth="439.0" />
+      <AnchorPane fx:id="partialAnchorPane" layoutX="204.0" layoutY="50.0" prefHeight="416.0" prefWidth="477.0">
+         <children>
+            <Line endX="-137.3333282470703" endY="322.3333435058594" layoutX="120.0" layoutY="19.0" startX="-137.3333282470703" startY="-17.666671752929688" />
+         </children></AnchorPane>
    </children>
 </AnchorPane>
