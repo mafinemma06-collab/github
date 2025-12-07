@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox spacing="10.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.simulatingnewspaper.AdvertiserDashboardController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <Label fx:id="welcomeLabel" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Welcome, Advertiser!" />
+    <TabPane tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Manage Ads">
+                <VBox spacing="10.0">
+                    <HBox spacing="10.0" alignment="CENTER_LEFT">
+                        <Button text="View Active Print Bookings (Goal 1)" onAction="#onViewActivePrintBookings" />
+                        <TextField fx:id="dateFilterField" promptText="Filter by Date (YYYY-MM-DD)" onAction="#onFilterByDate" />
+                        <Button text="Filter" onAction="#onFilterByDate" />
+                    </HBox>
+                    <TableView fx:id="adsTable" VBox.vgrow="ALWAYS">
+                        <columns>
+                            <TableColumn fx:id="dateCol" text="Date" />
+                            <TableColumn fx:id="sizeCol" text="Section/Size" />
+                            <TableColumn fx:id="costCol" text="Cost" />
+                            <TableColumn fx:id="statusCol" text="Status" />
+                        </columns>
+                    </TableView>
+                    <HBox spacing="10.0" alignment="CENTER_RIGHT">
+                        <Button text="Delete Selected Ad (Goal 6)" onAction="#onDeleteAd" />
+                        <Button text="Edit Ad (Goal 5 - NOT IMPLEMENTED HERE)" disable="true" />
+                    </HBox>
+                </VBox>
+            </Tab>
+            <Tab text="Create Campaign (Goal 3)">
+                <GridPane hgap="10" vgap="10" alignment="TOP_LEFT">
+                    <padding><Insets top="20" left="20"/></padding>
+                    <Label text="Ad Title:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                    <TextField fx:id="titleField" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+                    <Label text="Target Section:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                    <TextField fx:id="sectionField" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+                    <Label text="Duration (Days):" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                    <TextField fx:id="durationField" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+                    <Button text="Create Campaign" onAction="#onCreateCampaign" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+                </GridPane>
+            </Tab>
+            <Tab text="Profile &amp; Billing (Goals 7 &amp; 8)">
+                <VBox spacing="10.0">
+                    <Label style="-fx-font-weight: bold;" text="Contact Information (Goal 8)" />
+                    <GridPane hgap="10" vgap="10">
+                        <Label text="Company Name:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                        <TextField fx:id="companyNameField" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+                        <Label text="Contact Phone:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                        <TextField fx:id="phoneField" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+                        <Button text="Save Changes" onAction="#onUpdateContactInfo" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+                        <Label fx:id="profileMessageLabel" textFill="GREEN" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+                    </GridPane>
+                    <Separator />
+                    <Button text="View Billing Info (Goal 7 - NOT IMPLEMENTED HERE)" disable="true" />
+                    <Button text="View Reports (Goal 4 - NOT IMPLEMENTED HERE)" disable="true" />
+                </VBox>
+            </Tab>
+        </tabs>
+    </TabPane>
+</VBox>

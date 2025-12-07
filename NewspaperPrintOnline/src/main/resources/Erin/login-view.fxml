@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.simulatingnewspaper.LoginController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label text="Newspaper System Login" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #333333;" />
+
+    <GridPane hgap="15" vgap="15" alignment="CENTER">
+        <Label text="Username:" style="-fx-font-weight: bold;" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+        <TextField fx:id="usernameField" GridPane.rowIndex="0" GridPane.columnIndex="1" promptText="Enter username (e.g., adv1 or smm1)" />
+
+        <Label text="Password:" style="-fx-font-weight: bold;" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+        <PasswordField fx:id="passwordField" GridPane.rowIndex="1" GridPane.columnIndex="1" promptText="Enter password" />
+    </GridPane>
+
+    <VBox alignment="CENTER" spacing="10.0">
+        <Button text="Login" onAction="#onLoginButtonClick" style="-fx-padding: 8 25; -fx-font-size: 14; -fx-background-color: #007bff; -fx-text-fill: white;" />
+
+        <Hyperlink text="New User? Sign Up Here" onAction="#onSignUpLinkClick" />
+    </VBox>
+
+    <Label fx:id="messageLabel" textFill="#ff0000" style="-fx-font-size: 12;" />
+</VBox>

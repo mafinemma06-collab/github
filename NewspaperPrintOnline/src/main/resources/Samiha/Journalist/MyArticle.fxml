@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="journalist.MyArticleController">
+   <children>
+      <TableView fx:id="tABLEview" layoutX="107.0" layoutY="78.0" prefHeight="200.0" prefWidth="348.0">
+        <columns>
+          <TableColumn fx:id="articleIdTcolumn" prefWidth="75.0" text="Article Id" />
+            <TableColumn fx:id="articleTitleTcolumn" prefWidth="75.0" text="article Title" />
+            <TableColumn fx:id="statusTcolumn" prefWidth="75.0" text="Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
